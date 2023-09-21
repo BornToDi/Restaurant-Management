@@ -1,0 +1,289 @@
+<template>
+  <!--first part-->
+  <div class="pl-3 md:ml-12 q-mt-xl">
+    <div class="text-h4 text-bold">Dine in service</div>
+  </div>
+  <!--done-->
+  <!--second part-->
+  <div
+    style="
+      background-color: #f2f5f6;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #e1e0e0;
+      font-size: 25px;
+    "
+    class="q-mt-md q-mb-xl md:mx-12 sm:font-light"
+  >
+    <div
+      class="flex text-bold text-base md:text-2xl q-pa-md px-3 md:px-7 text-grey-7"
+      style="padding-top: 30px; padding-bottom: 30px"
+    >
+      Service availability
+
+      <div class="group relative inline-block visible md:visible">
+        <q-icon class="text-lg text-white" color="blue-7" name="info"></q-icon>
+        <div
+          class="absolute bottom-full left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded bg-black py-[6px] px-4 text-sm font-semibold text-white opacity-0 group-hover:opacity-100"
+        >
+          <span
+            class="absolute bottom-[-4px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm bg-black"
+          ></span>
+          Store dine in service avaibility
+        </div>
+      </div>
+    </div>
+    <!--First part finish-->
+    <hr style="text-color: #e1e0e0" />
+    <div
+      class="row pl-3 md:pl-7 text-bold q-py-sm text-grey-8 text-base md:text-xl"
+      style="
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        padding-right: 40px;
+      "
+    >
+      <div class="col-12 col-sm-9 flex">
+        <q-icon
+          class="cursor-pointer text-info q-pr-sm text-grey-7"
+          style="padding-top: 3px"
+          name="radio_button_checked"
+        />
+        Dine in service is turned off
+      </div>
+
+      <div
+        class="col-12 col-sm-3 pl-3 pt-3 md:pt-0 text-left md:text-right"
+        style="justify-items: center"
+      >
+        <q-btn
+          @click="card = true"
+          class="sm:w-24 text-weight-bolder"
+          outline
+          rounded
+          color="green"
+          label="Turn on"
+        />
+      </div>
+    </div>
+  </div>
+  <!--second part done-->
+  <!--q-dialoug Turn On-->
+  <q-dialog v-model="card">
+    <q-card class="my-card" style="width: 600px; height: 150px">
+      <q-card-section>
+        <div class="row no-wrap items-center">
+          <div class="col text-h6 ellipsis q-pt-sm">
+            Turn on dine in functionalities for your store.
+          </div>
+        </div>
+      </q-card-section>
+      <q-separator />
+
+      <q-card-actions align="right">
+        <div class="q-mx-md q-py-sm">
+          <q-btn v-close-popup outline rounded color="info" label="close" />
+          <q-btn outline rounded color="green" label="turn on dine in" />
+        </div>
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
+  <!--q-dialoug finish-->
+  <!--3rd part-->
+  <div class="pl-3 md:ml-12 q-mt-xl">
+    <div class="text-h4 text-bold">Dine in tables</div>
+  </div>
+  <!--3rd part done-->
+  <!--4th part-->
+  <div
+    style="
+      background-color: #f2f5f6;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #e1e0e0;
+      font-size: 25px;
+    "
+    class="q-mt-md q-mb-xl md:mx-12 sm:font-light"
+  >
+    <div class="row">
+      <div
+        class="col-12 col-sm-9 flex text-bold text-base md:text-2xl q-pa-md px-3 md:px-7 text-grey-7"
+        style="padding-top: 30px; padding-bottom: 5px"
+      >
+        Table management
+      </div>
+      <div
+        class="col-12 col-sm-3 pl-5 pt-1 pb-2 md:pt-8 md:pr-9 text-left md:text-right"
+        style="justify-items: center"
+      >
+        <q-btn
+          @click="$router.replace('/serviceHome/dineTable')"
+          class="sm:w-24 text-weight-bolder"
+          outline
+          rounded
+          color="blue"
+          label="Manage"
+        />
+      </div>
+    </div>
+
+    <!--First part finish-->
+    <hr style="text-color: #e1e0e0" />
+    <div
+      class="row pl-3 md:pl-7 text-bold q-py-sm text-grey-8 text-base md:text-xl"
+      style="
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        padding-right: 40px;
+      "
+    >
+      <div class="col-12 col-sm-9 flex">
+        <q-icon
+          class="cursor-pointer text-info q-pr-sm text-grey-7"
+          style="padding-top: 3px"
+          name="radio_button_checked"
+        />
+        Dine in service is turned off
+      </div>
+    </div>
+  </div>
+  <!--4th part done-->
+  <!--q-dialoug Turn On-->
+  <q-dialog v-model="card">
+    <q-card class="my-card" style="width: 600px; height: 150px">
+      <q-card-section>
+        <div class="row no-wrap items-center">
+          <div class="col text-h6 ellipsis q-pt-sm">
+            Turn on dine in functionalities for your store.
+          </div>
+        </div>
+      </q-card-section>
+      <q-separator />
+
+      <q-card-actions align="right">
+        <div class="q-mx-md q-py-sm">
+          <q-btn v-close-popup outline rounded color="info" label="close" />
+          <q-btn outline rounded color="green" label="turn on dine in" />
+        </div>
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
+  <!--q-dialoug finish-->
+  <!--5th part-->
+  <div class="pl-3 md:ml-12 q-mt-xl">
+    <div class="text-h4 text-bold">Dine in settings</div>
+  </div>
+  <!--done-->
+  <!--6th part-->
+  <div
+    style="
+      background-color: #f2f5f6;
+      border-style: solid;
+      border-width: 1px;
+      border-color: #e1e0e0;
+      font-size: 25px;
+    "
+    class="q-mt-md q-mb-xl md:mx-12 sm:font-light"
+  >
+    <div
+      class="flex text-bold text-base md:text-2xl q-pa-md px-3 md:px-7 text-grey-7"
+      style="padding-top: 30px; padding-bottom: 30px"
+    >
+      Genius house
+      <div class="group relative inline-block visible md:visible">
+        <q-icon class="text-lg text-white" color="blue-7" name="info"></q-icon>
+        <div
+          class="absolute bottom-full left-1/2 z-20 -translate-x-1/2 whitespace-nowrap rounded bg-black py-[6px] px-4 text-sm font-semibold text-white opacity-0 group-hover:opacity-100"
+        >
+          <span
+            class="absolute bottom-[-4px] left-1/2 -z-10 h-2 w-2 -translate-x-1/2 rotate-45 rounded-sm bg-black"
+          ></span>
+          {{ Edit }}
+        </div>
+      </div>
+    </div>
+    <!--First part finish-->
+    <hr style="text-color: #e1e0e0" />
+    <div
+      class="row pl-3 md:pl-7 text-bold q-py-sm text-grey-8 text-base md:text-xl"
+      style="
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        padding-right: 40px;
+      "
+    >
+      <div class="col-12 col-sm-9 flex">
+        <q-icon
+          class="cursor-pointer text-info q-pr-sm text-grey-7"
+          style="padding-top: 3px"
+          name="radio_button_checked"
+        />
+        Dine in service not available
+      </div>
+
+      <div
+        class="col-12 col-sm-3 pl-3 pt-3 md:pt-0 text-left md:text-right"
+        style="justify-items: center"
+      >
+        <q-btn
+          @click="card2 = true"
+          class="sm:w-24 text-weight-bolder"
+          outline
+          rounded
+          color="green"
+          label="Active"
+        />
+      </div>
+    </div>
+  </div>
+  <!--6th part done-->
+  <!--q-dialoug Active-->
+  <q-dialog v-model="card2">
+    <q-card class="my-card" style="width: 600px; height: 300px">
+      <q-card-section>
+        <div class="row no-wrap items-center">
+          <div class="col text-h6 ellipsis q-pt-sm">
+            Turn on dine in functionalities for your store.
+          </div>
+        </div>
+      </q-card-section>
+      <q-separator />
+      <div class="text-base text-red-900 ellipsis q-py-sm q-pl-md">
+        Make sure all required information is given.
+      </div>
+      <div class="q-pt-sm q-pl-md text-base">
+        Phone number <br />
+        Opening hours <br />
+        Payment methods <br />
+        Delivery systems
+      </div>
+      <q-card-actions align="right">
+        <div class="q-mx-md q-py-sm">
+          <q-btn v-close-popup outline rounded color="info" label="close" />
+          <q-btn outline rounded color="green" label="turn on dine in" />
+        </div>
+      </q-card-actions>
+    </q-card>
+  </q-dialog>
+  <!--q-dialoug finish-->
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ref } from 'vue';
+
+export default defineComponent({
+  // name: 'PageName'
+  setup() {
+    return {
+      card: ref(false),
+      card2: ref(false),
+      text: ref(''),
+      Edit: 'edit option',
+    };
+  },
+});
+</script>
